@@ -45,8 +45,15 @@ function startNewGame(wrapperEl, modeSelector) {
         singularSquare.style.height = squareSize;
         // if per cambiare background-color in base 
         if (squareContent % 2 === 0){
-            singularSquare.classList.add
+            singularSquare.classList.add('bg-black');
+        } else {
+            singularSquare.classList.add('bg-purple')
         }
+        // accendi e spengi ad ogni click
+        singularSquare.addEventListener('click', function(){
+            singularSquare.classList.toggle('clicked');
+            console.log(squareContent);
+        })
 
 
     }
