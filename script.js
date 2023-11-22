@@ -20,15 +20,14 @@ function startNewGame(wrapperEl, modeSelector) {
     let cellsNumb;
     // creo uno switch per implementare piu modalita dentro un unico elemento su js (special thanks goes to 'rc2pc2')
     switch (mode){
-        case 0:
-        default:
-            cellsNumb = 100;
-            break;
         case 1:
             cellsNumb = 81;
             break;
         case 2:
             cellsNumb = 49;
+            break;
+        default:
+            cellsNumb = 100;
             break;
     }
     // 'Math.sqrt'static method returns the square root of a number (source: mdn)
@@ -65,4 +64,3 @@ function createNewSquare(){
     newSquareEl.classList.add('squareEl');
     return newSquareEl;
 }
-
