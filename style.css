@@ -20,15 +20,22 @@
     color: white;
     text-align: center;
 }
-.container .tools #start-button{
+.container .tools #start-button,
+select{
     background-color: aqua;
     border: none;
     border-radius: 15px;
-    margin: 1rem 1rem;
+    margin: .5rem;
     width: 5rem;
     height: 2rem;
+    text-align: center;
 }
-.grid{
+.container .tools #start-button:hover,
+select:hover{
+    background-color: purple;
+    color: white;
+}
+.main-grid{
     width: 100%;
     max-width: 540px;
     border: 2px solid white;
