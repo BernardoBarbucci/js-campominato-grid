@@ -42,4 +42,17 @@ select:hover{
     margin: 30px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.main-grid article.squareEl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 2px solid black;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
