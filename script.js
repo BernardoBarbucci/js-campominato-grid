@@ -34,16 +34,16 @@ function startNewGame(wrapperEl, modeSelector) {
     // 'Math.sqrt'static method returns the square root of a number (source: mdn)
     let squaresRow = Math.sqrt(cellsNumb);
     // ciclo for per generare gli squares
-    for (let i = 0; i <= cellsNumb; i++) {
+    for (let i = 0; i < cellsNumb; i++) {
         const singularSquare = createNewSquare();
-        const squareContent = i;
+        const squareContent = i + 1; // aggiunto + 1 per far partire i quadratini da 1 e non da 0
         // print su html
         singularSquare.innerHTML += `<span> ${squareContent} </span>`;
-        // grnadezza square
+        // grandezza square
         const squareSize = `calc(100% / ${squaresRow})`;
         singularSquare.style.width = squareSize;
         singularSquare.style.height = squareSize;
-        // if per cambiare background-color in base 
+        // if per cambiare background-color in base a pari e dispari
         if (squareContent % 2 === 0){
             singularSquare.classList.add('bg-black');
         } else {
@@ -53,11 +53,16 @@ function startNewGame(wrapperEl, modeSelector) {
         singularSquare.addEventListener('click', function(){
             singularSquare.classList.toggle('clicked');
             console.log(squareContent);
-        })
-
-
+        });
+        // appendchild di singularS
+        wrapperEl.appendChild(singularSquare);
     }
-
 }
 
+// funzione per creare il quadratino
+function createNewSquare(){
+    const newSquareEl = document.createElement('article');
+    newSquareEl.classList.add('squareEl');
+    return newSquareEl;
+}
 
