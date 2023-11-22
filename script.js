@@ -29,8 +29,19 @@ function startNewGame(gridEl, gameModeEl) {
             cellsNumb = 49;
             break;
     }
+    // 'Math.sqrt'static method returns the square root of a number (source: mdn)
+    let squaresRow = Math.sqrt(cellsNumb);
+    // ciclo for per generare gli squares
+    for (let i = 0; i <= cellsNumb; i++) {
+        const singularSquare = createNewSquare();
+        const squareContent = i;
 
-    
+        singularSquare.innerHTML += `<span> ${squareContent} </span>`;
+
+        const squareSize = `calc(100% / ${squaresRow})`;
+        singularSquare.style.width = squareSize;
+        singularSquare.style.height = squareSize;
+    }
 
 
 
