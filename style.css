@@ -57,3 +57,10 @@ div.main-grid article.squareEl{
     font-weight: 500;
     color: white;
 }
+
+.main-grid article.squareEl.clicked.bg-black{
+    background-color: black;
+}
+.main-grid article.squareEl.clicked.bg-purple{
+    background-color: purple;
+}

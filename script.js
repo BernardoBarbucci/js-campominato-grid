@@ -64,3 +64,8 @@ function createNewSquare(){
     newSquareEl.classList.add('squareEl');
     return newSquareEl;
 }
+
+// creo un numero random compreso nell'intervallo scelto
+// function randomNumbGen(minNumb, maxNumb){
+//     return Math.floor( Math.random() * (maxNumb - minNumb + 1) + minNumb);
+// }
