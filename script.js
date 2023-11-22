@@ -4,7 +4,7 @@
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto 
 // un messaggio in console con il numero della cella cliccata.
 
-const gridEl = doument.querySelector('main .container div.main-grid');
+const gridEl = document.querySelector('.main-grid');
 const startButtonEl = document.querySelector('button#start-button');
 const gameModeEl = document.querySelector('select#select-difficulty');
 
@@ -13,7 +13,7 @@ startButtonEl.addEventListener('click', function(){
 });
 
 // funzione dove creo i quadratini e creo una griglia
-function startNewGame(gridEl, gameModeEl) {
+function startNewGame(wrapperEl, modeSelector) {
     wrapperEl.innerHTML = '';
 
     const mode = parseInt(modeSelector.value);
@@ -44,7 +44,9 @@ function startNewGame(gridEl, gameModeEl) {
         singularSquare.style.width = squareSize;
         singularSquare.style.height = squareSize;
         // if per cambiare background-color in base 
-        
+        if (squareContent % 2 === 0){
+            singularSquare.classList.add
+        }
 
 
     }
