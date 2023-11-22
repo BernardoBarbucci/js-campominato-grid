@@ -30,6 +30,11 @@ function startNewGame(wrapperEl, modeSelector) {
             cellsNumb = 100;
             break;
     }
+    
+    // array per fare shuffle random dei numeri e posizionarli successivamente a caso e non in ordine
+    
+
+
     // 'Math.sqrt'static method returns the square root of a number (source: mdn)
     let squaresRow = Math.sqrt(cellsNumb);
     // ciclo for per generare gli squares
@@ -64,8 +69,6 @@ function createNewSquare(){
     newSquareEl.classList.add('squareEl');
     return newSquareEl;
 }
+// funzione per generare un array di numeri da 1 a n
 
-// creo un numero random compreso nell'intervallo scelto
-// function randomNumbGen(minNumb, maxNumb){
-//     return Math.floor( Math.random() * (maxNumb - minNumb + 1) + minNumb);
-// }
+// funzione per fare shuffle random dentro all'array
