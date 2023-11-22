@@ -1,6 +1,8 @@
 // L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
 // Ogni cella ha un numero progressivo, da 1 a 100.
 // Ci saranno quindi 10 caselle per ognuna delle 10 righe.
+// Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto 
+// un messaggio in console con il numero della cella cliccata.
 
 const gridEl = doument.querySelector('main .container div.main-grid');
 const startButtonEl = document.querySelector('button#start-button');
@@ -35,18 +37,18 @@ function startNewGame(gridEl, gameModeEl) {
     for (let i = 0; i <= cellsNumb; i++) {
         const singularSquare = createNewSquare();
         const squareContent = i;
-
+        // print su html
         singularSquare.innerHTML += `<span> ${squareContent} </span>`;
-
+        // grnadezza square
         const squareSize = `calc(100% / ${squaresRow})`;
         singularSquare.style.width = squareSize;
         singularSquare.style.height = squareSize;
+        // if per cambiare background-color in base 
+        
+
+
     }
-
-
 
 }
 
 
-// Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto 
-    // un messaggio in console con il numero della cella cliccata.
