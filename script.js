@@ -12,6 +12,25 @@ startButtonEl.addEventListener('click', function(){
 
 // funzione dove creo i quadratini e creo una griglia
 function startNewGame(gridEl, gameModeEl) {
+    wrapperEl.innerHTML = '';
+
+    const mode = parseInt(modeSelector.value);
+    let cellsNumb;
+    // creo uno switch per implementare piu modalita dentro un unico elemento su js (special thanks goes to 'rc2pc2')
+    switch (mode){
+        case 0:
+        default:
+            cellsNumb = 100;
+            break;
+        case 1:
+            cellsNumb = 81;
+            break;
+        case 2:
+            cellsNumb = 49;
+            break;
+    }
+
+    
 
 
 }
