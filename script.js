@@ -15,7 +15,6 @@ startButtonEl.addEventListener('click', function(){
 // funzione dove creo i quadratini e creo una griglia
 function startNewGame(wrapperEl, modeSelector) {
     wrapperEl.innerHTML = '';
-
     const mode = parseInt(modeSelector.value);
     let cellsNumb;
     // creo uno switch per implementare piu modalita dentro un unico elemento su js (special thanks goes to 'rc2pc2')
@@ -30,11 +29,6 @@ function startNewGame(wrapperEl, modeSelector) {
             cellsNumb = 100;
             break;
     }
-    
-    // array per fare shuffle random dei numeri e posizionarli successivamente a caso e non in ordine
-    
-
-
     // 'Math.sqrt'static method returns the square root of a number (source: mdn)
     let squaresRow = Math.sqrt(cellsNumb);
     // ciclo for per generare gli squares
@@ -62,13 +56,9 @@ function startNewGame(wrapperEl, modeSelector) {
         wrapperEl.appendChild(singularSquare);
     }
 }
-
 // funzione per creare il quadratino
 function createNewSquare(){
     const newSquareEl = document.createElement('article');
     newSquareEl.classList.add('squareEl');
     return newSquareEl;
 }
-// funzione per generare un array di numeri da 1 a n
-
-// funzione per fare shuffle random dentro all'array
